@@ -28,7 +28,7 @@ pipeline {
 
          stage('Sonarqube Analysis ') {
              steps {
-                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=jenkins'
+                   sh  'mvn sonar:sonar   -Dsonar.projectKey=tn.esprit.spring:gestion-station-ski  -Dsonar.host.url=http://172.10.0.140:9000 -Dsonar.login=admin -Dsonar.password=jenkins
             }
         }
 
